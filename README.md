@@ -1,12 +1,17 @@
 # mxc-servicemanager
-
-master:
+####Master
+[![Latest Stable Version](https://poser.pugx.org/mxc-commons/mxc-servicemanager/v/stable)](https://packagist.org/packages/mxc-commons/mxc-servicemanager)
 [![Build Status](https://secure.travis-ci.org/mxc-commons/mxc-servicemanager.svg?branch=master)](https://secure.travis-ci.org/mxc-commons/mxc-servicemanager)
 [![Coverage Status](https://coveralls.io/repos/github/mxc-commons/mxc-servicemanager/badge.svg?branch=master)](https://coveralls.io/github/mxc-commons/mxc-servicemanager?branch=master)
-develop:
+[![composer.lock](https://poser.pugx.org/mxc-commons/mxc-servicemanager/composerlock)](https://packagist.org/packages/mxc-commons/mxc-servicemanager)
+[![License](https://poser.pugx.org/mxc-commons/mxc-servicemanager/license)](https://packagist.org/packages/mxc-commons/mxc-servicemanager)
+
+####Develop
+[![Latest Unstable Version](https://poser.pugx.org/mxc-commons/mxc-servicemanager/v/unstable)](https://packagist.org/packages/mxc-commons/mxc-servicemanager)
 [![Build Status](https://secure.travis-ci.org/mxc-commons/mxc-servicemanager.svg?branch=develop)](https://secure.travis-ci.org/mxc-commons/mxc-servicemanager)
 [![Coverage Status](https://coveralls.io/repos/github/mxc-commons/mxc-servicemanager/badge.svg?branch=develop)](https://coveralls.io/github/mxc-commons/mxc-servicemanager?branch=develop)
-
+[![composer.lock](https://poser.pugx.org/mxc-commons/mxc-servicemanager/composerlock)](https://packagist.org/packages/mxc-commons/mxc-servicemanager)
+[![License](https://poser.pugx.org/mxc-commons/mxc-servicemanager/license)](https://packagist.org/packages/mxc-commons/mxc-servicemanager)
 ## Version
 
 Release 0.9.0 created on 2018-03-13 by Frank Hein, maxence operations GmbH, Germany.
