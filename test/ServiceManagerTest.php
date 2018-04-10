@@ -58,7 +58,7 @@ class ServiceManagerTest extends TestCase
     public function testConfigurationTakesPrecedenceWhenMerged()
     {
         $factory = $this->getMockBuilder(FactoryInterface::class)
-            ->getMock();
+            ->get();
 
         $factory->expects($this->once())->method('__invoke');
 
