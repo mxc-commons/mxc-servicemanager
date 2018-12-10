@@ -29,7 +29,7 @@
 	"require-dev" : {
 		"mikey179/vfsStream" : "^1.6.5",
 		"ocramius/proxy-manager" : "^2.2.0",
-		"phpbench/phpbench" : "dev-master",
+		"phpbench/phpbench" : "0.15.0",
 		"phpunit/phpunit" : "^6.5.7",
 		"zendframework/zend-coding-standard" : "~1.0.0"
 	},
