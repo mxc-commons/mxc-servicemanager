@@ -103,5 +103,4 @@ class CreateSingleFeaturedServiceManagerBench
     {
         new ServiceManager($this->configMagicalFactories);
     }
-
 }
