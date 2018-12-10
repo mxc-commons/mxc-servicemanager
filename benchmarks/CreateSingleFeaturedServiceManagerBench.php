@@ -11,9 +11,9 @@ namespace ZendBench\ServiceManager;
 use PhpBench\Benchmark\Metadata\Annotations\Iterations;
 use PhpBench\Benchmark\Metadata\Annotations\Revs;
 use PhpBench\Benchmark\Metadata\Annotations\Warmup;
+use stdClass;
 use Zend\ServiceManager\ServiceManager;
 use ZendBench\ServiceManager\BenchAsset\DelegatorFactory;
-use stdClass;
 
 /**
  * @Revs(50000)
@@ -33,6 +33,8 @@ class CreateSingleFeaturedServiceManagerBench
     private $configDelegators;
     private $configFactories;
     private $configInvokables;
+    private $configMagicalInvokables;
+    private $configMagicalFactories;
 
     public function __construct()
     {
@@ -47,6 +49,8 @@ class CreateSingleFeaturedServiceManagerBench
             $this->configInvokables['invokables']["invokable_$i"] = BenchAsset\Foo::class;
             $this->configDelegators['factories']["factory_$i"]    = BenchAsset\FactoryFoo::class;
             $this->configDelegators['delegators']["factory_$i"]   = [ DelegatorFactory::class, DelegatorFactory::class];
+            $this->configMagicalFactories['magicals'][$i] = BenchAsset\Magical::class;
+            $this->configMagicalInvokables['magicals'][$i] = BenchAsset\Foo::class;
         }
     }
 
@@ -83,4 +87,21 @@ class CreateSingleFeaturedServiceManagerBench
     {
         new ServiceManager($this->configInvokables);
     }
+
+    /**
+     * @Revs(10000)
+     */
+    public function benchCreateNewServiceManagerWithMagicalInvokablesOnly()
+    {
+        new ServiceManager($this->configMagicalInvokables);
+    }
+
+    /**
+     * @Revs(10000)
+     */
+    public function benchCreateNewServiceManagerWithMagicalFactoriesOnly()
+    {
+        new ServiceManager($this->configMagicalFactories);
+    }
+
 }

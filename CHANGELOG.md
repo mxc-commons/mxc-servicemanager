@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## Version 1.1.0 - 2018-12-10: Added 'magicals' section to service manager configuration
+
+### Added
+- The 'magicals' section is a list of service names. Its purpose is to simplify factory and invokable setup.
+
+      'service_manager' => [
+          'services' => [ ... ],
+          'factories' => [ ... ],
+          'invokables' => [ ... ],
+          'delegators' => [ ... ],
+          'lazy_services' => [ ... ]
+          'aliases' => [ ... ],
+          'initializers' => [ ... ],
+          'shared' => [ ... ],
+          
+          'magicals' => [
+                Example::class,
+                ...
+          ],                
+      ];
+
+If `ExampleFactory::class` exists, this factory gets registered for `Example::class`. If `ExampleFactory::class` does not exist, `Example::class` gets registered as an invokable.
+
+Note that explicit factory or invokable registration takes precedence over magical registration in the same config array.
+
+- Added tests and benchmarks for magicals
+
+## Version 1.0.0
+
+No changes.
+
 ## Version 0.9.0 - 2018-03-13: Reworked has() to prefer non-alias resolution
 
 ### Changed

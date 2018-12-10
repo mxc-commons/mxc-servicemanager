@@ -9,7 +9,7 @@ develop:
 
 ## Version
 
-Release 1.0 created on 2018-11-26 by Frank Hein, maxence operations GmbH, Germany.
+Release 1.1 created on 2018-12-10 by Frank Hein, maxence operations GmbH, Germany.
 
 This version is based on Zend Service Manager 3.x and is backwards compatible with it.
 
@@ -45,6 +45,7 @@ mxc-servicemanager will be kept compatible to zend-servicemanager. Changes to ma
     * abstract factories
 * Speed up service manager assets
     * ConfigAbstractFactory
+* Simplified configuration for common cases
 * Comprehensive benchmark suite
 
 ## Installation
@@ -57,7 +58,7 @@ To install mxc-servicemanager:
 
     ```json
     "require": {
-        "mxc-commons/mxc-servicemanager": "^1.0"
+        "mxc-commons/mxc-servicemanager": "^1.1"
     }
     ```
 

@@ -13,6 +13,9 @@ use PhpBench\Benchmark\Metadata\Annotations\Revs;
 use PhpBench\Benchmark\Metadata\Annotations\Warmup;
 use Zend\ServiceManager\ServiceManager;
 use ZendBench\ServiceManager\BenchAsset\DelegatorFactory;
+use ZendBench\ServiceManager\BenchAsset\Foo;
+use ZendBench\ServiceManager\BenchAsset\InvokableMagical;
+use ZendBench\ServiceManager\BenchAsset\Magical;
 
 /**
  * @Revs(100000)
@@ -162,5 +165,23 @@ class SetNewServicesBench
     {
         $sm = clone $this->sm;
         $sm->addAbstractFactory($this->abstractFactory);
+    }
+
+    /**
+     * @todo @link https://github.com/phpbench/phpbench/issues/304
+     */
+    public function benchSetMagicalFactory()
+    {
+        $sm = clone $this->sm;
+        $sm->setMagical(Magical::class);
+    }
+
+    /**
+     * @todo @link https://github.com/phpbench/phpbench/issues/304
+     */
+    public function benchSetMagicalInvokable()
+    {
+        $sm = clone $this->sm;
+        $sm->setMagical(Foo::class);
     }
 }
