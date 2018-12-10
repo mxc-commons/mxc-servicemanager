@@ -29,6 +29,10 @@ Note that explicit factory or invokable registration takes precedence over magic
 
 - Added tests and benchmarks for magicals
 
+### Removed
+
+- Travis CI checks for the PHP 7.1 platform. PHP 7.2 is required now.
+
 ## Version 1.0.0
 
 No changes.
